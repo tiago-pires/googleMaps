@@ -28,9 +28,16 @@
 
             var map = new google.maps.Map(document.getElementById("map"), options);
 
+            var icon = {
+                url: 'hart.svg',
+                anchor: new google.maps.Point(11, 22), // 22 == 100%, google box is 22px
+                disableDefaultUI: true
+            }
+
             var markerOptions = {
                 position: options.center,
                 map: map,
+                icon: icon
             }
 
             var marker = new google.maps.Marker(markerOptions);
@@ -39,7 +46,7 @@
 
     </script>
 
-    <script src="secret.js"></script>
+    <script src="env.js"></script>
 
     <script>
 
@@ -57,7 +64,6 @@
         });
 
     </script>
-
 </body>
 
 </html>
